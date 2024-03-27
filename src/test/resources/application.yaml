@@ -1,0 +1,9 @@
+spring:
+  sql:
+    init:
+      mode: always
+  r2dbc:
+    url: r2dbc:tc:postgresql:///test?TC_IMAGE_TAG=15-alpine
+  logging:
+    level:
+      org.testcontainers: DEBUG
