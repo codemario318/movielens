@@ -1,15 +1,11 @@
-package com.mario.movielens.Movie
+package com.mario.movielens.movie
 
-import com.mario.movielens.movie.MovieRepository
 import org.junit.jupiter.api.Nested
 import org.junit.jupiter.api.Test
-import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.test.context.SpringBootTest
 
 @SpringBootTest
-class MovieServiceTests(
-    @Autowired private val repository: MovieRepository
-) {
+class MovieServiceTests {
 //    @Nested
 //    inner class `영화 저장` {
 //        @Test

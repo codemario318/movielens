@@ -1,7 +1,5 @@
-package com.mario.movielens.Movie
+package com.mario.movielens.movie
 
-import com.mario.movielens.movie.Movie
-import com.mario.movielens.movie.MovieRepository
 import kotlinx.coroutines.flow.last
 import kotlinx.coroutines.runBlocking
 import org.junit.jupiter.api.AfterEach
@@ -52,7 +50,7 @@ class MovieRepositoryTests(
     fun `영화 저장시 제목은 중복 불가`() {
         assertThrows<DataIntegrityViolationException> {
             runBlocking {
-                repository.save(Movie(null, "test1"))
+                repository.save(Movie(null, "test1", ""))
             }
         }
     }
@@ -60,7 +58,7 @@ class MovieRepositoryTests(
     @Test
     fun `제목으로 영화 조회 가능`() {
         runBlocking {
-            val movie = repository.findByTitle("test1");
+            val movie = repository.findByTitle("test1")
             assertEquals("test1", movie!!.title)
         }
     }
