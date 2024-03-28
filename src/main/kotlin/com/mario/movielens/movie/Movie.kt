@@ -7,7 +7,7 @@ import org.springframework.data.relational.core.mapping.Table
 data class Movie (
     @Id val id: Long?,
     val title: String,
-    val genres: String? = null,
+    val genres: String,
     val ratingCount: Long = 0,
     val ratingTotal: Long = 0,
 )

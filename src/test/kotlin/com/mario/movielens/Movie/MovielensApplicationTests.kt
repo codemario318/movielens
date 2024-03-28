@@ -1,4 +1,4 @@
-package com.mario.movielens
+package com.mario.movielens.Movie
 
 import org.junit.jupiter.api.Test
 import org.springframework.boot.test.context.SpringBootTest
